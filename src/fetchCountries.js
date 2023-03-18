@@ -16,13 +16,14 @@ export function countriesListMarkup({
   flags,
   languages,
 }) {
+  const languagesList = Object.values(languages).join(', ');
   return `<div class='country-info__title'>
               <img src="${flags.svg}" alt="flag">
               <h2>${name.official}</h2>
           </div>
           <p><b>Capital</b>: ${capital}</p>
           <p><b>Population</b>: ${population}</p>
-          <p><b>languages</b>: ${Object.values(languages)}</p>
+          <p><b>languages</b>: ${languagesList}</p>
           `;
 }
 
